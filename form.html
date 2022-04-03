@@ -43,6 +43,7 @@
       </div>
     </nav>
   </header>
+  
   <main class="catalog-main">
     <h2 class="visualy-hidden">Приветствие</h2>
     <div class="banner__container">
@@ -53,25 +54,26 @@
       <p class="section__title">Оставьте свой отзыв</p>
       <p class="section__subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них,
         а также о посещенных вами достопримечательностях</p>
-      <form action="">
-        <fieldset class="">
-          <legend class="">Ваше общее впечатление:</legend>
-          <ul class="">
-            <li class="">
-              <input class="visually-hidden control-input radio-input" type="radio" name="good" value="good" id="">
-              <label class="control radio-label" for="h">Скорее положительное</label>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="fieldset__title">
+          <legend class="legend__title">Ваше общее впечатление:</legend>
+          <ul class="form-list">
+            <li class="form-list__item">
+              <input class="visually-hidden control-input radio-input" type="radio" name="feedback-rate" value="good" id="rate">
+              <label class="control radio-label" for="rate">Скорее положительное</label>
             </li>
-            <li class="">
-              <input class="visually-hidden control-input radio-input" type="radio" name="bad" value="bad" id="">
-              <label class="control radio-label" for="">Скорее отрицательное</label>
+            <li class="form-list__item">
+              <input class="visually-hidden control-input radio-input" type="radio" name="feedback-rate" value="bad" id="rate">
+              <label class="control radio-label" for="rate">Скорее отрицательное</label>
             </li>
-            <li class="">
-              <input class="visually-hidden control-input radio-input" type="radio" name="indecisive" value="indecisive" id="">
-              <label class="control radio-label" for="">Затрудняюсь ответить</label>
+            <li class="form-list__item">
+              <input class="visually-hidden control-input radio-input" type="radio" name="feedback-rate" value="indecisive"
+                id="rate">
+              <label class="control radio-label" for="rate">Затрудняюсь ответить</label>
             </li>
         </fieldset>
-        <fieldset class="">
-          <legend class="">Представьтесь:</legend>
+        <fieldset class="fieldset__title">
+          <legend class="legend__title">Представьтесь:</legend>
           <p class="field-group name">
             <label class="field-name" for="feedback-name">Имя*</label>
             <input class="feedback-form-field field" type="text" id="feedback-name" name="feedback-name"
@@ -88,8 +90,8 @@
               placeholder="Введите отчество">
           </p>
         </fieldset>
-        <fieldset class="">
-          <legend>Контактная информация:</legend>
+        <fieldset class="fieldset__title">
+          <legend class="legend__title">Контактная информация:</legend>
           <p class="field-group tel">
             <label class="field-name" for="feedback-tel">Телефон*:</label>
             <input class="feedback-form-field field" type="tel" id="feedback-tel" name="feedback-tel"
@@ -101,51 +103,50 @@
               placeholder="Введите e-mail">
           </p>
         </fieldset>
-        <fieldset class="">
-          <legend>Посещенные достопримечательности</legend>
-          <ul class="">
-            <li class="-item">
-              <input class="visually-hidden control-input checkbox-input" id="" type="checkbox"
-                name="" checked>
-              <label class="control checkbox-label" for="">Мост Дьявола</label>
+        <fieldset class="fieldset__title">
+          <legend class="legend__title">Посещенные достопримечательности</legend>
+          <ul class="form-list__name">
+            <li class="form-list__item">
+              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-devil" type="checkbox" name="" checked>
+              <label class="control checkbox-label" for="feedback-attraction-devil">Мост Дьявола</label>
             </li>
-            <li class="-item">
-              <input class="visually-hidden control-input checkbox-input" id="" type="checkbox"
-                name="" checked>
-              <label class="control checkbox-label" for="">Гора-Колокол</label>
+            <li class="form-list__item">
+              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-bell" type="checkbox" name="" checked>
+              <label class="control checkbox-label" for="feedback-attraction-bell">Гора-Колокол</label>
             </li>
-            <li class="-item">
-              <input class="visually-hidden control-input checkbox-input" id="" type="checkbox"
-                name="" checked>
-              <label class="control checkbox-label" for="e">Слайд-парк</label>
+            <li class="form-list__item">
+              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-park" type="checkbox" name="" checked>
+              <label class="control checkbox-label" for="feedback-attraction-park">Слайд-парк</label>
             </li>
-            <li class="catalog-filter-item">
-              <input class="visually-hidden control-input checkbox-input" id="" type="checkbox"
-                name="">
-              <label class="control checkbox-label" for="">Красные скалы</label>
+            <li class="form-list__item">
+              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-rocks" type="checkbox" name="">
+              <label class="control checkbox-label" for="feedback-attraction-rocks">Красные скалы</label>
             </li>
         </fieldset>
-        <fieldset>
-          <legend>Опишите свои эмоции:</legend>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+        <fieldset class="fieldset__title">
+          <legend class="legend__title">Опишите свои эмоции:</legend>
+          <textarea name="feedback-review" id="" cols="30" rows="10"></textarea>
         </fieldset>
-
         </ul>
-        <button class="button-show button-yellow" type="submit">Отправить отзыв</button>
+        <button class="page-button" type="submit">Отправить отзыв</button>
         <small>* — обязательные поля</small>
       </form>
     </section>
 
-
-
     <footer class="page-footer">
       <p class="">#visitsedona</p>
       <ul class="socials-list">
-        <li class="socials-list__item"></li>
-        <li class="socials-list__item"></li>
-        <li class="socials-list__item"></li>
+        <li class="socials-list__item">
+          <span class="visualy-hidden">Твиттер</span>
+        </li>
+        <li class="socials-list__item">
+          <span class="visualy-hidden">Фейсбук</span>
+        </li>
+        <li class="socials-list__item">
+          <span class="visualy-hidden">Ютуб</span>
+        </li>
       </ul>
-      <p class="">Разработано</p>
+      <p class="html-academy">Разработано</p>
     </footer>
 </body>
 </main>
