@@ -3,24 +3,29 @@
 
 <head>
   <meta charset="utf-8">
+   <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <title>HTML Academy: Sedona</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <h1 class="visualy-hidden">Городок Седона</h1>
-    <a href="#" class="page-header__logo">
-      <img src="img/logotype-desktop.svg" width="189" height="97" alt="Городок Седона">
+    <h1 class="visually-hidden">Городок Седона</h1>
+    <div class="page-logo_wrapper">
+    <a href="#" class="page-logo__link">
+
+      <!-- <img src="img/logotype-desktop.svg" width="189" height="97" alt="Городок Седона"> -->
     </a>
-    <nav class="main-nav">
-      <h2 class="visualy-hidden">Навигация</h2>
-      <button class="main-nav__toggle" type="button">
+  </div>
+  <h2 class="visually-hidden">Навигация</h2>
+    <nav class="main-nav main-nav--opened">
+      <button class="main-nav__toggle " type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav_wrapper">
+      <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item list__item--active">
+          <li class="site-list__item site-list__item--active">
             <a href="#" class="site-list__item-link">
               Главная
             </a>
@@ -48,13 +53,12 @@
   </header>
 
   <main class="page-main">
-    <h2 class="visualy-hidden">Приветствие</h2>
-    <div class="banner__container">
-      <img class="banner__backgroung" src="../source/img/back-desktop.jpg"
-        alt="Welcome to the gorgeous Sedona Because grand canyon sucks!">
+    <h2 class="visually-hidden">Приветствие</h2>
+    <div class="page-intro__wrapper">
+      <img class="page-intro__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
     </div>
     <section class="main-advantages">
-      <h2 class="visualy-hidden">Преимущества</h2>
+      <h2 class="visually-hidden">Преимущества</h2>
       <p class="section__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p class="section__subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <ol class="advantages-list">
