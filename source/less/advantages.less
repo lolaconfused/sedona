@@ -1,0 +1,40 @@
+.section__title,
+.section__subtitle {
+  width: 287px;
+}
+
+.advantages-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  counter-reset: item;
+}
+
+.advantages-list__item::before {
+  counter-increment: item;
+  content: "— №" counter(item) "—";
+}
+
+.advantages-sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.advantages-list__item {
+  background-color: #81b3d2;
+}
+
+.advantages-sublist__item-devil {
+  background-color: #eeeeee;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-list__item-subtitle {
+  margin: 0;
+}
+
