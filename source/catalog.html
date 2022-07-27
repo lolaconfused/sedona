@@ -3,25 +3,44 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Sedona</title>
-  <link rel="stylesheet" href="../source/css/style.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+<title>HTML Academy: Sedona</title>
+<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <h1 class="visualy-hidden">Городок Седона</h1>
-    <a href="#" class="page-header__logo">
-      <img src="../source/img/logotype-desktop.svg" width="189" height="97" alt="Городок Седона">
+  <h1 class="visually-hidden">Городок Седона</h1>
+    <nav class="main-nav main-nav--opened"> <!-- main-nav--opened for opened -->
+        <h2 class="visually-hidden">Навигация</h2>
+  <div class="page-logo_wrapper">
+    <a href="#" class="page-logo__link">
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+           ./img/logotype-desktop.svg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+          ./img/logotype-tablet.svg"
+        />
+        <img
+          src="./img/logotype-mobile.svg"
+          alt="Городок Седона"
+        />
+       </picture>
     </a>
-    <nav class="main-nav">
-      <h2 class="visualy-hidden">Навигация</h2>
+  </div>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav_wrapper">
+      <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item list__item--active">
-            <a href="./index.html" class="site-list__item-link">
+          <li class="site-list__item site-list__item--active">
+            <a href="#" class="site-list__item-link">
               Главная
             </a>
           </li>
@@ -43,42 +62,41 @@
         </ul>
       </div>
     </nav>
-
   </header>
 
   <main class="catalog-main">
-    <h2 class="visualy-hidden">Приветствие</h2>
+    <h2 class="visually-hidden">Приветствие</h2>
     <div class="banner__container">
       <img class="banner__backgroung" src="../source/img/back-desktop.jpg"
         alt="Sedona">
     </div>
 
     <section class="catalog-media__photo">
-      <h2 class="visualy-hidden">Фото и видео</h2>
-      <p class="section__title">Фото и видео</p>
-      <p class="section__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+      <h2 class="visually-hidden">Фото и видео</h2>
+      <p class="section__title page-title ">Фото и видео</p>
+      <p class="section__subtitle page-subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
         политике и экономике.</p>
         <div class="">
-          <img class="catalog-media__img" src="./images/photo-1-desktop.jpg.jpg" alt="Неродные просторы">
+          <img class="catalog-media__img" src="./img/photo-1-mobile.jpg" alt="Неродные просторы">
           <p class="catalog-media__item-bar">Неродные просторы</p>
           <p class="catalog-media__item-bar">Автор фото: Борис</p>
           <button class="catalog-media__like" type="button">Понравилось</button>
         </div>
       <ul class="catalog-media__list">
         <li class="catalog-media__item">
-          <img class="catalog-media__img" src="./images/photo-2-desktop.jpg.jpg" alt="">
+          <img class="catalog-media__img" src="./img/photo-2-mobile.jpg" alt="">
           <p class="catalog-media__item-bar"></p>
           <p class="catalog-media__item-bar"></p>
           <button class="catalog-media__like" type="button">Понравилось</button>
         </li>
         <li class="catalog-media__item">
-          <img class="catalog-media__img" src="./images/photo-3-desktop.jpg.jpg" alt="">
+          <img class="catalog-media__img" src="./img/photo-3-mobile.jpg" alt="">
           <p class="catalog-media__item-bar"></p>
           <p class="catalog-media__item-bar"></p>
           <button class="catalog-media__like" type="button">Понравилось</button>
         </li>
         <li class="catalog-media__item">
-          <img class="catalog-media__img" src="./images/photo-4-desktop.jpg.jpg" alt="">
+          <img class="catalog-media__img" src="./img/photo-4-desktop.jpg.jpg" alt="">
           <p class="catalog-media__item-bar"></p>
           <p class="catalog-media__item-bar"></p>
           <button class="catalog-media__like" type="button">Понравилось</button>
@@ -91,16 +109,20 @@
         политике и экономике.</p>
     </section>
 
-
     <footer class="page-footer">
-
-      <p class="">#visitsedona</p>
+      <p class="hashtag">#visitsedona</p>
       <ul class="socials-list">
-        <li class="socials-list__item"></li>
-        <li class="socials-list__item"></li>
-        <li class="socials-list__item"></li>
+        <li class="socials-list__item">
+          <a href="#" class="twitter"></a>
+        </li>
+        <li class="socials-list__item">
+          <a href="#" class="facebook"></a>
+        </li>
+        <li class="socials-list__item">
+          <a href="#" class="youtube"></a>
+        </li>
       </ul>
-      <p class="">Разработано</p>
+      <p class="developed">Разработано</p>
     </footer>
 </body>
 </main>

@@ -1,0 +1,50 @@
+// .wellcome::before {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   background: url("/img/wing.svg") no-repeat bottom right;
+//   width: 600px;
+//   height: 57px;
+//   left: 0;
+//   bottom: 0;
+// }
+
+// .wellcome::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   background: url("/img/wing.svg") no-repeat bottom right;
+//   width: 600px;
+//   height: 57px;
+//   right: 0;
+//   bottom: 0;
+//   transform: scale(-1, 1);
+// }
+
+.wellcome {
+  text-align: center;
+  background-image: url("/img/back-mobile.jpg");
+  background-color: rgb(215, 232, 242);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 389px;
+  position: relative;
+}
+
+.wellcome__image {
+  height: 214px;
+  padding-top: 90px;
+  padding-bottom: 85px;
+}
+
+@media (min-width: @tablet-width) {
+  .wellcome {
+    background-image: url("/img/back-desktop.jpg");
+  }
+
+  .wellcome__image {
+    height: 350px;
+    padding-top: 77px;
+    padding-bottom: 91px;
+  }
+}

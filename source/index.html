@@ -11,15 +11,29 @@
 
 <body class="page__body">
   <header class="page-header">
-    <h1 class="visually-hidden">Городок Седона</h1>
-    <div class="page-logo_wrapper">
+  <h1 class="visually-hidden">Городок Седона</h1>
+    <nav class="main-nav main-nav--opened"> <!-- main-nav--opened for opened -->
+        <h2 class="visually-hidden">Навигация</h2>
+  <div class="page-logo_wrapper">
     <a href="#" class="page-logo__link">
-
-      <!-- <img src="img/logotype-desktop.svg" width="189" height="97" alt="Городок Седона"> -->
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+           ./img/logotype-desktop.svg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+          ./img/logotype-tablet.svg"
+        />
+        <img
+          src="./img/logotype-mobile.svg"
+          alt="Городок Седона"
+        />
+       </picture>
     </a>
   </div>
-  <h2 class="visually-hidden">Навигация</h2>
-     <nav class="main-nav main-nav--opened"> <!-- main-nav--opened for opened -->
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -45,25 +59,25 @@
               HTML Academy
             </a>
           </li>
-
         </ul>
       </div>
     </nav>
-
   </header>
 
   <main class="page-main">
-    <h2 class="visually-hidden">Приветствие</h2>
-    <div class="page-intro__wrapper">
-      <img class="page-intro__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
-    </div>
+    <section class="wellcome">
+      <h2 class="visually-hidden">Приветствие</h2>
+      <img class="wellcome__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
+    </section>
     <section class="main-advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="section__title page-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p class="section__subtitle page-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <ol class="advantages-list">
-        <li class="advantages-list__item">
+        <li>
           <h3 class="advantages-list__item-title page-title">Настоящий городок</h3>
+        </li>
+        <li class="advantages-list__item">
           <p class="advantages-list__item-subtitle page-subtitle"> Седона не аттракцион для туристов, там течет
             своя жизнь</p>
           <ul class="advantages-sublist">
@@ -81,24 +95,26 @@
             </li>
           </ul>
         </li>
+        <li>
+            <h3 class="advantages-list__item-title page-title">Там есть мост Дьявола</h3>
+          </li>
         <li class="advantages-list__item">
-          <h3 class="advantages-list__item-title page-title">Там есть мост Дьявола</h3>
           <p class="advantages-list__item-subtitle page-subtitle">Да, по нему можно пройти! Если вы
             осмелитесь, конечно</p>
           </li>
+          <li><h4 class="advantages-list__item-title page-title">Небольшая площадь</h4></li>
             <li  class="advantages-sublist__item-devil advantages-list__item">
-              <h4 class="advantages-list__item-title page-title">Небольшая площадь</h4>
               <p class="advantages-list__item-subtitle page-subtitle">Все интересные места находятся очень близко</p>
             </li>
+            <li><h4 class="advantages-list__item-title page-title">Красивая дорога</h4></li>
             <li class="advantages-sublist__item-devil advantages-list__item">
-              <h4 class="advantages-list__item-title page-title">Красивая дорога</h4>
               <p class="advantages-list__item-subtitle page-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
+             <li ><h4 class="advantages-list__item-title page-title">Мало туристов</h4></li>
             <li class="advantages-sublist__item-devil advantages-list__item">
-              <h4 class="advantages-list__item-title page-title">Мало туристов</h4>
               <p class="advantages-list__item-subtitle page-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-      </ol>
+       </ol>
     </section>
     <section class="search-form">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
@@ -118,7 +134,6 @@
     </section>
   </main>
   <footer class="page-footer">
-
     <p class="hashtag">#visitsedona</p>
     <ul class="socials-list">
       <li class="socials-list__item">

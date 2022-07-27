@@ -3,25 +3,44 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <title>HTML Academy: Sedona</title>
-  <link rel="stylesheet" href="../source/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <h1 class="visualy-hidden">Городок Седона</h1>
-    <a href="#" class="page-header__logo">
-      <img src="../source/img/logotype-desktop.svg" width="189" height="97" alt="Городок Седона">
+  <h1 class="visually-hidden">Городок Седона</h1>
+    <nav class="main-nav main-nav--opened"> <!-- main-nav--opened for opened -->
+        <h2 class="visually-hidden">Навигация</h2>
+  <div class="page-logo_wrapper">
+    <a href="#" class="page-logo__link">
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+           ./img/logotype-desktop.svg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+          ./img/logotype-tablet.svg"
+        />
+        <img
+          src="./img/logotype-mobile.svg"
+          alt="Городок Седона"
+        />
+       </picture>
     </a>
-    <nav class="main-nav">
-      <h2 class="visualy-hidden">Навигация</h2>
+  </div>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav_wrapper">
+      <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item list__item--active">
-            <a href="./index.html" class="site-list__item-link">
+          <li class="site-list__item site-list__item--active">
+            <a href="#" class="site-list__item-link">
               Главная
             </a>
           </li>
@@ -46,12 +65,12 @@
   </header>
 
   <main class="catalog-main">
-    <h2 class="visualy-hidden">Приветствие</h2>
+    <h2 class="visually-hidden">Приветствие</h2>
     <div class="banner__container">
       <img class="banner__backgroung" src="../source/img/back-desktop.jpg" alt="Sedona">
     </div>
     <section class="feedback-form">
-      <h2 class="visualy-hidden">Форма отправки отзыва</h2>
+      <h2 class="visually-hidden">Форма отправки отзыва</h2>
       <p class="section__title">Оставьте свой отзыв</p>
       <p class="section__subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них,
         а также о посещенных вами достопримечательностях</p>
@@ -135,19 +154,19 @@
     </section>
 
     <footer class="page-footer">
-      <p class="">#visitsedona</p>
+      <p class="hashtag">#visitsedona</p>
       <ul class="socials-list">
         <li class="socials-list__item">
-          <span class="visualy-hidden">Твиттер</span>
+          <a href="#" class="twitter"></a>
         </li>
         <li class="socials-list__item">
-          <span class="visualy-hidden">Фейсбук</span>
+          <a href="#" class="facebook"></a>
         </li>
         <li class="socials-list__item">
-          <span class="visualy-hidden">Ютуб</span>
+          <a href="#" class="youtube"></a>
         </li>
       </ul>
-      <p class="html-academy">Разработано</p>
+      <p class="developed">Разработано</p>
     </footer>
 </body>
 </main>
