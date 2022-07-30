@@ -11,65 +11,64 @@
 
 <body class="page__body">
   <header class="page-header">
-  <h1 class="visually-hidden">Городок Седона</h1>
-    <nav class="main-nav main-nav--opened"> <!-- main-nav--opened for opened -->
-        <h2 class="visually-hidden">Навигация</h2>
-  <div class="page-logo_wrapper">
-    <a href="#" class="page-logo__link">
-      <picture>
-        <source
-          media="(min-width: 1200px)"
-          srcset="
-           ./img/logotype-desktop.svg"
-        />
-        <source
-          media="(min-width: 768px)"
-          srcset="
-          ./img/logotype-tablet.svg"
-        />
-        <img
-          src="./img/logotype-mobile.svg"
-          alt="Городок Седона"
-        />
-       </picture>
-    </a>
-  </div>
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="#" class="site-list__item-link">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="./catalog.html" class="site-list__item-link">
-              Фото и видео
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="./form.html" class="site-list__item-link">
-              Форма отзыва
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="#" class="site-list__item-link">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+    <h1 class="visually-hidden">Городок Седона</h1>
+      <div class="page-logo_wrapper">
+      <a href="#" class="page-logo__link">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+             ./img/logotype-desktop.svg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+            ./img/logotype-tablet.svg"
+          />
+          <img
+            src="./img/logotype-mobile.svg"
+            alt="Городок Седона"
+          />
+         </picture>
+      </a>
+    </div>
+      <nav class="main-nav main-nav--opened main-nav--nojs"> <!-- main-nav--opened for opened -->
+          <h2 class="visually-hidden">Навигация</h2>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#" class="site-list__item-link">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="./catalog.html" class="site-list__item-link">
+                Фото и видео
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="./form.html" class="site-list__item-link">
+                Форма отзыва
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__item-link">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
   <main class="catalog-main">
-    <h2 class="visually-hidden">Приветствие</h2>
-    <div class="banner__container">
-      <img class="banner__backgroung" src="../source/img/back-desktop.jpg"
-        alt="Sedona">
-    </div>
+   <section class="welcome">
+      <h2 class="visually-hidden">Приветствие</h2>
+      <img class="welcome__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
+    </section>
 
     <section class="catalog-media__photo">
       <h2 class="visually-hidden">Фото и видео</h2>
@@ -124,5 +123,22 @@
       </ul>
       <p class="developed">Разработано</p>
     </footer>
+
+    <script>
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
+
+       navMain.classList.remove("main-nav--nojs");
+
+       navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+       });
+    </script>
 </body>
 </main>

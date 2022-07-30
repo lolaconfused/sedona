@@ -12,9 +12,7 @@
 <body class="page__body">
   <header class="page-header">
   <h1 class="visually-hidden">Городок Седона</h1>
-    <nav class="main-nav main-nav--opened"> <!-- main-nav--opened for opened -->
-        <h2 class="visually-hidden">Навигация</h2>
-  <div class="page-logo_wrapper">
+    <div class="page-logo_wrapper">
     <a href="#" class="page-logo__link">
       <picture>
         <source
@@ -34,6 +32,8 @@
        </picture>
     </a>
   </div>
+    <nav class="main-nav main-nav--opened main-nav--nojs"> <!-- main-nav--opened for opened -->
+        <h2 class="visually-hidden">Навигация</h2>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -65,9 +65,9 @@
   </header>
 
   <main class="page-main">
-    <section class="wellcome">
+    <section class="welcome">
       <h2 class="visually-hidden">Приветствие</h2>
-      <img class="wellcome__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
+      <img class="welcome__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
     </section>
     <section class="main-advantages">
       <h2 class="visually-hidden">Преимущества</h2>
@@ -157,6 +157,22 @@
     </ul>
     <p class="developed">Разработано</p>
   </footer>
-</body>
 
+  <script>
+    var navMain = document.querySelector(".main-nav");
+    var navToggle = document.querySelector(".main-nav__toggle");
+
+     navMain.classList.remove("main-nav--nojs");
+
+     navToggle.addEventListener("click", function() {
+      if (navMain.classList.contains("main-nav--closed")) {
+        navMain.classList.remove("main-nav--closed");
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add("main-nav--closed");
+        navMain.classList.remove("main-nav--opened");
+      }
+     });
+  </script>
+</body>
 </html>
