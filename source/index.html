@@ -80,11 +80,28 @@
         <li class="advantages-list__item advantages-list__number page-advantages">
           <p class="advantages-list__item-subtitle page-subtitle page-advantages"> Седона не аттракцион для туристов, там течет
             своя жизнь</p>
-            <img class="sedona-city" src="./img/photo-city@1x 1.jpg" alt="Городок">
+              <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                ./img/photo-city@1x.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                ./img/tab-photo-city@1x.jpg"
+              />
+              <img
+                src="./img/photo-city@1x 1.jpg"
+                alt="Городок"
+              />
+             </picture>
           <ul class="advantages-sublist">
             <li class="advantages-sublist__item">
+              <div class="a">
               <h4 class="advantages-list__item-title page-title house">Жилье</h4>
               <p class="advantages-list__item-subtitle page-subtitle ">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </div>
             </li>
             <li class="advantages-sublist__item">
               <h4 class="advantages-list__item-title page-title food">Еда</h4>
@@ -102,7 +119,22 @@
         <li class="advantages-list__item advantages-list__number page-advantages">
           <p class="advantages-list__item-subtitle page-subtitle page-advantages">Да, по нему можно пройти! Если вы
             осмелитесь, конечно</p>
-            <img class="sedona-city" src="./img/photo-bridge@1x 1.jpg" alt="Мост">
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                ./img/photo-bridge@1x.jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                ./img/tab-photo-bridge@1x.jpg"
+              />
+              <img
+                src="./img/photo-bridge@1x 1.jpg"
+                alt="Мост"
+              />
+             </picture>
           </li>
           <li class="advantages-sublist__item-devil">
             <h4 class="advantages-list__item-title page-title">Небольшая площадь</h4>

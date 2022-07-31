@@ -1,0 +1,53 @@
+.feedback-form {
+  text-align: center;
+}
+
+.fieldset__title {
+  border: none;
+}
+
+.form-list,
+.form-list__name {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox__label {
+  position: relative;
+  display: block;
+  margin-bottom: 35px;
+  padding-top: 12px;
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+  border-color: var(--black);
+}
+
+.checkbox__label::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  background: #000000;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  background-color: #f2f2f2;
+}
+
+.checkbox__label::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: block;
+  background: #f2f2f2;
+  border-radius: 50%;
+}
