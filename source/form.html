@@ -101,7 +101,7 @@
               placeholder="Введите телефон" maxlength="11" required>
           </p>
           <p class="field-group email">
-            <label class="field-name page-subtitle" for="feedback-email">Электронная почта:</label>
+            <label class="field-name page-subtitle" for="feedback-email">Электронная почта*:</label>
             <input class="feedback-form-field email-field field" type="email" id="feedback-email" name="feedback-email"
               placeholder="Введите e-mail">
           </p>
@@ -109,47 +109,47 @@
         <fieldset class="fieldset__title">
           <legend class="legend__title page-title">Ваше общее впечатление:</legend>
           <ul class="form-list">
-            <li class="form-list__item checkbox">
-              <input class="visually-hidden checkbox__input" type="radio" name="feedback-rate" value="good" id="good">
-              <label class="checkbox__label" for="good">Скорее положительное</label>
+            <li class="form-list__item radio">
+              <input class="visually-hidden radio__input" type="radio" name="feedback-rate" value="good" id="good" checked>
+              <label class="radio__label" for="good">Скорее положительное</label>
             </li>
-            <li class="form-list__item checkbox">
-              <input class="visually-hidden checkbox__input" type="radio" name="feedback-rate" value="bad" id="bad" >
-              <label class="checkbox__label" for="bad">Скорее отрицательное</label>
+            <li class="form-list__item radio">
+              <input class="visually-hidden radio__input" type="radio" name="feedback-rate" value="bad" id="bad" >
+              <label class="radio__label" for="bad">Скорее отрицательное</label>
             </li>
-            <li class="form-list__item checkbox">
-              <input class="visually-hidden checkbox__input" type="radio" name="feedback-rate" value="indecisive"
+            <li class="form-list__item radio">
+              <input class="visually-hidden radio__input" type="radio" name="feedback-rate" value="indecisive"
                 id="indecisive">
-              <label class="checkbox__label" for="indecisive">Затрудняюсь ответить</label>
+              <label class="radio__label" for="indecisive">Затрудняюсь ответить</label>
             </li>
         </fieldset>
         <fieldset class="fieldset__title">
           <legend class="legend__title page-title">Посещенные достопримечательности</legend>
           <ul class="form-list__name">
             <li class="form-list__item">
-              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-devil" type="checkbox" name="" checked>
-              <label class="control checkbox-label" for="feedback-attraction-devil">Мост Дьявола</label>
+              <input class="visually-hidden control-input checkbox__input" id="feedback-attraction-devil" type="checkbox" name="devils-bridge" checked>
+              <label class="control checkbox__label" for="feedback-attraction-devil">Мост Дьявола</label>
             </li>
             <li class="form-list__item">
-              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-bell" type="checkbox" name="" checked>
-              <label class="control checkbox-label" for="feedback-attraction-bell">Гора-Колокол</label>
+              <input class="visually-hidden control-input checkbox__input" id="feedback-attraction-bell" type="checkbox" name="mount-bell" checked>
+              <label class="control checkbox__label" for="feedback-attraction-bell">Гора-Колокол</label>
             </li>
             <li class="form-list__item">
-              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-park" type="checkbox" name="" checked>
-              <label class="control checkbox-label" for="feedback-attraction-park">Слайд-парк</label>
+              <input class="visually-hidden control-input checkbox__input" id="feedback-attraction-park" type="checkbox" name="slide-park" checked>
+              <label class="control checkbox__label" for="feedback-attraction-park">Слайд-парк</label>
             </li>
             <li class="form-list__item">
-              <input class="visually-hidden control-input checkbox-input" id="feedback-attraction-rocks" type="checkbox" name="">
-              <label class="control checkbox-label" for="feedback-attraction-rocks">Красные скалы</label>
+              <input class="visually-hidden control-input checkbox__input" id="feedback-attraction-rocks" type="checkbox" name="red-rocks">
+              <label class="control checkbox__label" for="feedback-attraction-rocks">Красные скалы</label>
             </li>
         </fieldset>
         <fieldset class="fieldset__title">
           <legend class="legend__title page-title">Опишите свои эмоции:</legend>
-          <textarea name="feedback-review" id="" cols="30" rows="10"></textarea>
+          <textarea class="feedback-review" name="feedback-review" id="" cols="30" rows="10" height="160px"></textarea>
         </fieldset>
         </ul>
         <button class="page-button" type="submit">Отправить отзыв</button>
-        <small>* — обязательные поля</small>
+        <!-- <small>* — обязательные поля</small> -->
       </form>
     </section>
 
@@ -168,6 +168,28 @@
       </ul>
       <p class="developed">Разработано</p>
     </footer>
+
+    <div class="modal-container modal-container__show">
+      <div class="modal modal-failure">
+        <section>
+
+          <button>
+
+          </button>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal-container modal-container__show">
+      <div class="modal modal-succes">
+        <section>
+          
+          <button>
+
+          </button>
+        </section>
+      </div>
+    </div>
 
     <script>
       var navMain = document.querySelector(".main-nav");
