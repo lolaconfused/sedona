@@ -12,7 +12,6 @@
 <body class="page__body">
   <header class="page-header">
   <h1 class="visually-hidden">Городок Седона</h1>
-    <div class="page-logo_wrapper">
     <a href="./index.html" class="page-logo__link">
       <picture>
         <source
@@ -31,8 +30,7 @@
         />
        </picture>
     </a>
-  </div>
-    <nav class="main-nav main-nav--opened main-nav--nojs"> <!-- main-nav--opened for opened -->
+    <nav class="main-nav main-nav--closed main-nav--nojs"> <!-- main-nav--opened for opened -->
         <h2 class="visually-hidden">Навигация</h2>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -69,18 +67,17 @@
       <h2 class="visually-hidden">Приветствие</h2>
       <img class="welcome__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
     </section>
-    <section class="main-advantages">
+    <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="section__title page-title">Седона — небольшой <br> городок в Аризоне, заслуживающий большего!</p>
       <p class="section__subtitle page-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <ol class="advantages-list">
         <li class="advantages-list__item">
           <h3 class="advantages-list__item-title page-title page-advantages">Настоящий городок</h3>
-        </li>
-        <li class="advantages-list__item advantages-list__number page-advantages">
+          <p class="advantages-list__item-subtitle page-subtitle page-advantages">— №1 —</p>
           <p class="advantages-list__item-subtitle page-subtitle page-advantages"> Седона не аттракцион для туристов, там течет
             своя жизнь</p>
-              <picture>
+            <picture>
               <source
                 media="(min-width: 1200px)"
                 srcset="
@@ -91,33 +88,31 @@
                 srcset="
                 ./img/tab-photo-city@1x.jpg"
               />
-              <img
-                src="./img/photo-city@1x 1.jpg"
+              <img src="./img/photo-city@1x-1.jpg"
                 alt="Городок"
               />
              </picture>
-          <ul class="advantages-sublist">
+        </li>
+      <li class="advantages-list__sublist">
+         <ul class="advantages-sublist">
             <li class="advantages-sublist__item">
-              <div class="a">
               <h4 class="advantages-list__item-title page-title house">Жилье</h4>
               <p class="advantages-list__item-subtitle page-subtitle ">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-              </div>
-            </li>
-            <li class="advantages-sublist__item">
-              <h4 class="advantages-list__item-title page-title food">Еда</h4>
-              <p class="advantages-list__item-subtitle page-subtitle">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
             </li>
             <li class="advantages-sublist__item">
               <h4 class="advantages-list__item-title page-title gift">Сувениры</h4>
               <p class="advantages-list__item-subtitle page-subtitle">Не только китайского, но и местного производства!</p>
             </li>
+              <li class="advantages-sublist__item">
+              <h4 class="advantages-list__item-title page-title food">Еда</h4>
+              <p class="advantages-list__item-subtitle page-subtitle">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+            </li>
           </ul>
-        </li>
+       </li>
         <li class="advantages-list__item">
             <h3 class="advantages-list__item-title page-title page-advantages">Там есть мост Дьявола</h3>
-          </li>
-        <li class="advantages-list__item advantages-list__number page-advantages">
-          <p class="advantages-list__item-subtitle page-subtitle page-advantages">Да, по нему можно пройти! Если вы
+            <p class="advantages-list__item-subtitle page-subtitle page-advantages">— №2 —</p>
+            <p class="advantages-list__item-subtitle page-subtitle page-advantages">Да, по нему можно пройти! Если вы
             осмелитесь, конечно</p>
             <picture>
               <source
@@ -131,27 +126,27 @@
                 ./img/tab-photo-bridge@1x.jpg"
               />
               <img
-                src="./img/photo-bridge@1x 1.jpg"
+                src="./img/photo-bridge@1x-1.jpg"
                 alt="Мост"
               />
-             </picture>
-          </li>
+            </picture>
+        </li>
+
           <li class="advantages-sublist__item-devil">
             <h4 class="advantages-list__item-title page-title">Небольшая площадь</h4>
+            <p class="advantages-list__item-subtitle page-subtitle">— №3 —</p>
+            <p class="advantages-list__item-subtitle page-subtitle">Все интересные места находятся очень близко</p>
           </li>
-            <li class="advantages-sublist__item-devil advantages-list__item advantages-list__number">
-              <p class="advantages-list__item-subtitle page-subtitle">Все интересные места находятся очень близко</p>
-            </li>
+
             <li class="advantages-sublist__item-devil">
               <h4 class="advantages-list__item-title page-title">Красивая дорога</h4>
-            </li>
-            <li class="advantages-sublist__item-devil advantages-list__item advantages-list__number">
+              <p class="advantages-list__item-subtitle page-subtitle">— №4 —</p>
               <p class="advantages-list__item-subtitle page-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
+
              <li class="advantages-sublist__item-devil">
               <h4 class="advantages-list__item-title page-title">Мало туристов</h4>
-            </li>
-            <li class="advantages-sublist__item-devil advantages-list__item advantages-list__number">
+              <p class="advantages-list__item-subtitle page-subtitle">— №5 —</p>
               <p class="advantages-list__item-subtitle page-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
        </ol>
@@ -192,21 +187,7 @@
     </a>
   </footer>
 
-  <script>
-    var navMain = document.querySelector(".main-nav");
-    var navToggle = document.querySelector(".main-nav__toggle");
+  <script src="./js/button.js"></script>
 
-     navMain.classList.remove("main-nav--nojs");
-
-     navToggle.addEventListener("click", function() {
-      if (navMain.classList.contains("main-nav--closed")) {
-        navMain.classList.remove("main-nav--closed");
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add("main-nav--closed");
-        navMain.classList.remove("main-nav--opened");
-      }
-     });
-  </script>
 </body>
 </html>

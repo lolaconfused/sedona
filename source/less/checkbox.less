@@ -1,0 +1,38 @@
+.checkbox__label {
+  position: relative;
+  display: block;
+  margin-bottom: 35px;
+  padding-top: 12px;
+}
+
+.checkbox__label::before {
+  content: "";
+  width: 52px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+  background: #f2f2f2;
+}
+
+.checkbox__label::after {
+  content: "";
+  width: 52px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+  background: #f2f2f2;
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+  border-color: #000000;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  background: url("../img/checkmark.svg") no-repeat center center;
+}
