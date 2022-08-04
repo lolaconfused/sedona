@@ -1,11 +1,16 @@
+.gift,
+.food,
+.house {
+  position: relative;
+  padding-bottom: 16px;
+}
+
 .house::before,
 .food::before,
 .gift::before {
   content: "";
   display: block;
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
   transform: scale(0.52);
 }
 
@@ -13,12 +18,16 @@
   background: url("../img/icon-house.svg") no-repeat center;
   width: 72px;
   height: 75px;
+  left: -66px;
+  top: -29px;
 }
 
 .food::before {
   background: url("../img/icon-burger.svg") no-repeat center;
   width: 76px;
   height: 68px;
+  left: -70px;
+  top: -23px;
 }
 
 .gift::before {
@@ -26,6 +35,8 @@
   background: url("../img/icon-gift.svg") no-repeat center;
   width: 64px;
   height: 75px;
+  left: -61px;
+  top: -30px;
 }
 
 @media (min-width: @tablet-width) {
