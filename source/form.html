@@ -3,79 +3,82 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport"
+   <meta name="viewport"
         content="width=device-width, initial-scale=1">
   <title>HTML Academy: Sedona</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="./fonts/ptsans.woff" as="font">
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="./fonts/ptsansbold.woff" as="font">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <h1 class="visually-hidden">Городок Седона</h1>
-      <div class="page-logo_wrapper">
-      <a href="#" class="page-logo__link">
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="
-             ./img/logotype-desktop.svg"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="
-            ./img/logotype-tablet.svg"
-          />
-          <img
-            src="./img/logotype-mobile.svg"
-            alt="Городок Седона"
-          />
-         </picture>
-      </a>
-    </div>
-      <nav class="main-nav main-nav--opened main-nav--nojs"> <!-- main-nav--opened for opened -->
-          <h2 class="visually-hidden">Навигация</h2>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="#" class="site-list__item-link">
-                Главная
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="./catalog.html" class="site-list__item-link">
-                Фото и видео
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="./form.html" class="site-list__item-link">
-                Форма отзыва
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__item-link">
-                HTML Academy
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+  <h1 class="visually-hidden">Городок Седона</h1>
+    <a href="./index.html" class="page-logo__link">
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+           ./img/logotype-desktop.svg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+          ./img/logotype-tablet.svg"
+        />
+        <img
+          src="./img/logotype-mobile.svg"
+          alt="Городок Седона"
+        />
+       </picture>
+    </a>
+    <nav class="main-nav  main-nav--nojs"> <!-- main-nav--opened for opened main-nav--closed-->
+        <h2 class="visually-hidden">Навигация</h2>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="./index.html" class="site-list__item-link">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="./catalog.html" class="site-list__item-link">
+              Фото и видео
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="./form.html" class="site-list__item-link">
+              Форма отзыва
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__item-link">
+              HTML Academy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <main class="catalog-main">
-    <section class="welcome">
+
+  <main class="form-main">
+    <section class="sedona-panel">
       <h2 class="visually-hidden">Приветствие</h2>
-      <img class="welcome__image" src="./img/full-intro.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
+      <img class="sedona-image" src="./img/sedona.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
     </section>
-    <section class="feedback-form">
+    <section class="feedback-form_section">
       <h2 class="visually-hidden">Форма отправки отзыва</h2>
-      <p class="section__title page-title">Оставьте свой отзыв</p>
-      <p class="section__subtitle page-subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них,
+      <p class="section-title page-title">Оставьте свой отзыв</p>
+      <p class="section-subtitle page-subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них,
         а также о посещенных вами достопримечательностях</p>
-      <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="fieldset__title">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="fieldset__title introduction">
           <legend class="legend__title page-title">Представьтесь:</legend>
           <p class="field-group name">
             <label class="field-name page-subtitle" for="feedback-name">Имя*</label>
@@ -93,7 +96,7 @@
               placeholder="Введите отчество">
           </p>
         </fieldset>
-        <fieldset class="fieldset__title">
+        <fieldset class="fieldset__title contacts">
           <legend class="legend__title page-title">Контактная информация:</legend>
           <p class="field-group tel">
             <label class="field-name page-subtitle" for="feedback-tel">Телефон*:</label>
@@ -106,7 +109,7 @@
               placeholder="Введите e-mail">
           </p>
         </fieldset>
-        <fieldset class="fieldset__title">
+        <fieldset class="fieldset__title review">
           <legend class="legend__title page-title">Ваше общее впечатление:</legend>
           <ul class="form-list">
             <li class="form-list__item radio">
@@ -123,7 +126,7 @@
               <label class="radio__label" for="indecisive">Затрудняюсь ответить</label>
             </li>
         </fieldset>
-        <fieldset class="fieldset__title">
+        <fieldset class="fieldset__title attractions">
           <legend class="legend__title page-title">Посещенные достопримечательности</legend>
           <ul class="form-list__name">
             <li class="form-list__item">
@@ -143,12 +146,12 @@
               <label class="control checkbox__label" for="feedback-attraction-rocks">Красные скалы</label>
             </li>
         </fieldset>
-        <fieldset class="fieldset__title">
+        <fieldset class="fieldset__title emotions">
           <legend class="legend__title page-title">Опишите свои эмоции:</legend>
           <textarea class="feedback-review" name="feedback-review" id="" cols="30" rows="10" height="160px"></textarea>
         </fieldset>
         </ul>
-        <button class="page-button" type="submit">Отправить отзыв</button>
+        <button class="page-button form-button" type="submit">Отправить отзыв</button>
         <!-- <small>* — обязательные поля</small> -->
       </form>
     </section>

@@ -1,7 +1,17 @@
-.section__title,
-.section__subtitle {
-  width: 287px;
+.advantages {
+  text-align: center;
+  padding-top: 29px;
+}
+
+.advantages .section-subtitle {
+  padding-bottom: 53px;
+}
+
+.advantages-title,
+.advantages-subtitle {
   padding-bottom: 31px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .advantages-list {
@@ -11,9 +21,12 @@
   background-color: #81b3d2;
 }
 
-
 .advantages-list__item {
-  padding-top: 51px;
+  padding: 44px 20px;
+}
+
+.advantages-image {
+  display: block;
 }
 
 .advantages-sublist {
@@ -26,17 +39,12 @@
   padding-top: 35px;
 }
 
-.advantages-sublist__item-devil {
+ol .sublist-devil {
   background-color: #eeeeee;
   padding: 0;
   margin: 0;
   padding-bottom: 37px;
   padding-top: 26px;
-}
-
-.advantages {
-  text-align: center;
-  padding-top: 29px;
 }
 
 .advantages-sublist__item {
@@ -45,4 +53,76 @@
 
 .advantages-sublist__item .advantages-sublist__text {
   line-height: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding: 0;
+  }
+
+  .advantages .section-title {
+    padding: 39px 120px 32px;
+    font-size: 21px;
+  }
+
+  .advantages .section-subtitle {
+    padding-bottom: 53px;
+  }
+
+  .advantages-title,
+  .advantages-subtitle {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .advantages .advantages-title {
+    font-size: 21px;
+  }
+
+  .advantages-subtitle {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages-list__sublist {
+    width: 100%;
+  }
+
+  .advantages-sublist__item {
+    width: 256px;
+  }
+
+  .advantages-sublist__item:nth-child(2) {
+    order: 2;
+  }
+
+  .advantages-sublist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 150px 0 20px 0;
+    text-align: center;
+  }
+
+  .advantages-list__item {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages .section-title {
+    padding: 51px 300px 32px;
+    font-size: 21px;
+  }
+
+  .advantages-sublist__item {
+    width: 400px;
+  }
 }

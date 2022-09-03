@@ -6,6 +6,10 @@
    <meta name="viewport"
         content="width=device-width, initial-scale=1">
   <title>HTML Academy: Sedona</title>
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="./fonts/ptsans.woff" as="font">
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="./fonts/ptsansbold.woff" as="font">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -30,7 +34,7 @@
         />
        </picture>
     </a>
-    <nav class="main-nav main-nav--closed main-nav--nojs"> <!-- main-nav--opened for opened -->
+    <nav class="main-nav  main-nav--nojs"> <!-- main-nav--opened for opened main-nav--closed-->
         <h2 class="visually-hidden">Навигация</h2>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -69,29 +73,31 @@
     </section>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
-      <p class="section__title page-title">Седона — небольшой <br> городок в Аризоне, заслуживающий большего!</p>
-      <p class="section__subtitle page-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <p class="section-title page-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p class="section-subtitle page-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <ol class="advantages-list">
-        <li class="advantages-list__item">
-          <h3 class="advantages-list__item-title page-title page-advantages">Настоящий городок</h3>
-          <p class="advantages-list__item-subtitle page-subtitle page-advantages">— №1 —</p>
-          <p class="advantages-list__item-subtitle page-subtitle page-advantages"> Седона не аттракцион для туристов, там течет
+        <li class="advantages-list__item main-feature">
+          <h3 class="page-title page-advantages">Настоящий городок</h3>
+           <p class="advantages-sublist__text page-subtitle">— №1 —</p>
+           <p class="advantages-sublist__text page-subtitle"> Седона не аттракцион для туристов, там течет
             своя жизнь</p>
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="
-                ./img/photo-city@1x.jpg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="
-                ./img/tab-photo-city@1x.jpg"
-              />
-              <img src="./img/photo-city@1x-1.jpg"
-                alt="Городок"
-              />
-             </picture>
+        </li>
+        <li class="advantages-list__image">
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="
+              ./img/photo-city@1x.jpg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+              ./img/tab-photo-city@1x.jpg"
+            />
+            <img class="advantages-image" src="./img/photo-city@1x-1.jpg"
+              alt="Городок"
+            />
+           </picture>
         </li>
       <li class="advantages-list__sublist">
          <ul class="advantages-sublist">
@@ -109,45 +115,46 @@
             </li>
           </ul>
        </li>
-        <li class="advantages-list__item">
-            <h3 class="advantages-list__item-title page-title page-advantages">Там есть мост Дьявола</h3>
-            <p class="advantages-list__item-subtitle page-subtitle page-advantages">— №2 —</p>
-            <p class="advantages-list__item-subtitle page-subtitle page-advantages">Да, по нему можно пройти! Если вы
+        <li class="advantages-list__item main-feature">
+            <h3 class="page-title page-advantages">Там есть мост Дьявола</h3>
+            <p class="advantages-sublist__text page-subtitle page-advantages">— №2 —</p>
+            <p class="advantages-sublist__text page-subtitle">Да, по нему можно пройти! Если вы
             осмелитесь, конечно</p>
-            <picture>
-              <source
-                media="(min-width: 1200px)"
-                srcset="
-                ./img/photo-bridge@1x.jpg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="
-                ./img/tab-photo-bridge@1x.jpg"
-              />
-              <img
-                src="./img/photo-bridge@1x-1.jpg"
-                alt="Мост"
-              />
-            </picture>
         </li>
-
-          <li class="advantages-sublist__item-devil">
-            <h4 class="advantages-list__item-title page-title">Небольшая площадь</h4>
-            <p class="advantages-list__item-subtitle page-subtitle">— №3 —</p>
-            <p class="advantages-list__item-subtitle page-subtitle">Все интересные места находятся очень близко</p>
+        <li class="advantages-list__image">
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="
+              ./img/photo-bridge@1x.jpg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+              ./img/tab-photo-bridge@1x.jpg"
+            />
+            <img class="advantages-image"
+              src="./img/photo-bridge@1x-1.jpg"
+              alt="Мост"
+            />
+          </picture>
+        </li>
+          <li class="advantages-sublist__item sublist-devil">
+            <h4 class="page-title">Небольшая площадь</h4>
+            <p class="page-subtitle">— №3 —</p>
+            <p class="page-subtitle">Все интересные места находятся очень близко</p>
           </li>
 
-            <li class="advantages-sublist__item-devil">
-              <h4 class="advantages-list__item-title page-title">Красивая дорога</h4>
-              <p class="advantages-list__item-subtitle page-subtitle">— №4 —</p>
-              <p class="advantages-list__item-subtitle page-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="advantages-sublist__item sublist-devil">
+              <h4 class="page-title">Красивая дорога</h4>
+              <p class="page-subtitle">— №4 —</p>
+              <p class="page-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
 
-             <li class="advantages-sublist__item-devil">
-              <h4 class="advantages-list__item-title page-title">Мало туристов</h4>
-              <p class="advantages-list__item-subtitle page-subtitle">— №5 —</p>
-              <p class="advantages-list__item-subtitle page-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
+             <li class="advantages-sublist__item sublist-devil">
+              <h4 class="page-title">Мало туристов</h4>
+              <p class="page-subtitle">— №5 —</p>
+              <p class="page-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
        </ol>
     </section>
