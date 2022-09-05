@@ -66,12 +66,12 @@
     </nav>
   </header>
 
-
   <main class="form-main">
     <section class="sedona-panel">
       <h2 class="visually-hidden">Приветствие</h2>
       <img class="sedona-image" src="./img/sedona.svg" alt="Welcome to the gorgeous Sedona Because grand canyon sucks">
     </section>
+
     <section class="feedback-form_section">
       <h2 class="visually-hidden">Форма отправки отзыва</h2>
       <p class="section-title page-title">Оставьте свой отзыв</p>
@@ -125,6 +125,7 @@
                 id="indecisive">
               <label class="radio__label" for="indecisive">Затрудняюсь ответить</label>
             </li>
+          </ul>
         </fieldset>
         <fieldset class="fieldset__title attractions">
           <legend class="legend__title page-title">Посещенные достопримечательности</legend>
@@ -145,12 +146,13 @@
               <input class="visually-hidden control-input checkbox__input" id="feedback-attraction-rocks" type="checkbox" name="red-rocks">
               <label class="control checkbox__label" for="feedback-attraction-rocks">Красные скалы</label>
             </li>
+          </ul>
         </fieldset>
         <fieldset class="fieldset__title emotions">
           <legend class="legend__title page-title">Опишите свои эмоции:</legend>
-          <textarea class="feedback-review" name="feedback-review" id="" cols="30" rows="10" height="160px"></textarea>
+          <textarea class="feedback-review" name="feedback-review" id="review" cols="30" rows="10"></textarea>
         </fieldset>
-        </ul>
+
         <button class="page-button form-button" type="submit">Отправить отзыв</button>
         <!-- <small>* — обязательные поля</small> -->
       </form>
@@ -172,44 +174,28 @@
       <p class="developed">Разработано</p>
     </footer>
 
-    <!-- <div class="modal-container modal-container__show">
-      <div class="modal modal-failure">
-        <section>
-
-          <button>
-
-          </button>
-        </section>
+    <section class="modal-error modal">
+      <div class="modal__block">
+        <h5 class="modal__title">Что-то пошло не так!</h5>
+        <p class="modal__text">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить
+        </p>
       </div>
-    </div>
-
-    <div class="modal-container modal-container__show">
-      <div class="modal modal-succes">
-        <section>
-
-          <button>
-
-          </button>
-        </section>
+      <button type="submit" class="modal__button page-button modal-close">Ок</button>
+    </section>
+    <section class="modal-success modal modal--grey">
+      <div class="modal__block">
+        <h5 class="modal__title">Ваш отзыв отправлен!</h5>
+        <p class="modal__text">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайщее
+          время мы опубликуем его на сайте
+        </p>
       </div>
-    </div> -->
+      <button type="submit" class="modal__button page-button modal-close">Закрыть окно</button>
+    </section>
+ <script src="./js/modal.js"></script>
+    <script src="./js/button.js"></script>
 
-    <script>
-      var navMain = document.querySelector(".main-nav");
-      var navToggle = document.querySelector(".main-nav__toggle");
-
-       navMain.classList.remove("main-nav--nojs");
-
-       navToggle.addEventListener("click", function() {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add("main-nav--closed");
-          navMain.classList.remove("main-nav--opened");
-        }
-       });
-    </script>
-
-</body>
 </main>
+</body>

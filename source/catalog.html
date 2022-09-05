@@ -36,7 +36,7 @@
          </picture>
       </a>
     </div>
-      <nav class="main-nav main-nav--opened main-nav--nojs"> <!-- main-nav--opened for opened -->
+      <nav class="main-nav  main-nav--nojs"> <!-- main-nav--opened for opened -->
           <h2 class="visually-hidden">Навигация</h2>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -108,7 +108,7 @@
            </button>
         </li>
         <li class="catalog-media__item">
-          <img class="catalog-media__img" src="./img/photo-4-desktop.jpg" alt="">
+          <img class="catalog-media__img" src="./img/photo-4-mobile.jpg" alt="">
           <p class="catalog-media__item-bar"></p>
           <p class="catalog-media__item-bar"></p>
           <button class="catalog-media__like" type="button">
@@ -138,22 +138,7 @@
       </ul>
       <p class="developed">Разработано</p>
     </footer>
-
-    <script>
-      var navMain = document.querySelector(".main-nav");
-      var navToggle = document.querySelector(".main-nav__toggle");
-
-       navMain.classList.remove("main-nav--nojs");
-
-       navToggle.addEventListener("click", function() {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add("main-nav--closed");
-          navMain.classList.remove("main-nav--opened");
-        }
-       });
-    </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/button.js"></script>
 </body>
 </main>
